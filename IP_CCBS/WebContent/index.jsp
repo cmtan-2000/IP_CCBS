@@ -10,7 +10,7 @@
 <body>
 
 	<form name="loginForm" action="BasicController" method="get">
-	Full Name: <input type="text" name="fullname" placeholder="fullname"/><br>
+	Full Name CM Branch: <input type="text" name="fullname" placeholder="fullname"/><br>
 	Email: <input type="text" name="email" placeholder="email"/><br>
 	<input type="submit" value="submit">
 	</form>
