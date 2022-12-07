@@ -1,0 +1,63 @@
+@charset "ISO-8859-1";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.company__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company__alltab ul li {
+  list-style: none;
+  display: inline;
+  padding: 1rem 3rem;
+  border-radius: 5px 5px 0px 0px;
+  background-color: #d4d4d4;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.company__alltab ul li.selected {
+  background-color: #bbcfd0;
+}
+
+.company__movietab,
+.visible_contents {
+  position: relative;
+}
+
+.movietab__btn {
+  position: absolute;
+  right: 1rem;
+}
+
+.movietab__posters {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-top: 4rem;
+}
+
+.movietab__poster {
+  width: 165px;
+  height: 235px;
+  padding: 1rem 3rem 1rem 0;
+}
+
+#visible_contents {
+  background-color: #bbcfd0;
+  padding: 3rem;
+  border-radius: 0px 5px 5px 5px;
+  line-height: 1.6rem;
+  margin-top: -1px;
+}
+
+.hidden_contents {
+  display: none;
+}
