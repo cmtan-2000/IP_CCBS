@@ -3,76 +3,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<script>
-        function change_tab(id) {
-            console.log("run");
-            document.getElementById("visible_contents").innerHTML = document.getElementById(id + "_desc").innerHTML;
-            document.getElementById("movietab").className = "notselected";
-            document.getElementById("snacktab").className = "notselected";
-            document.getElementById("halltab").className = "notselected";
-
-            document.getElementById(id).className = "selected";
-        }
-    </script>
-	<title>Company Homepage</title>
-	<link rel="stylesheet" href="css/eunicestyle.css">
+	<meta charset="ISO-8859-1">
+	<title>Login Page</title>
+	<link rel="stylesheet" href="css/Login.css">
 </head>
 <body>
-	<div class="company__header">
-        <img src="images/GSC-Cinema-Logo.png" style="width: 210px;"'>
-        <button>Generate Sales Report</button>
-    </div>
-
-    <br> <br>
-    <!-- for users to navigate and click the tabs -->
-    <div class="company__alltab">
-        <ul>
-            <li class="selected" id="movietab" onclick="change_tab(this.id)">Movie</li>
-            <li class="notselected" id="snacktab" onclick="change_tab(this.id)">Snack</li>
-            <li class="notselected" id="halltab" onclick="change_tab(this.id)">Hall</li>
-        </ul>
-    </div>
-
-    <div class="company__movietab hidden_contents" id="movietab_desc">
-        <button class="movietab__btn">Add Movie' s History</button>
-        <div class="movietab__posters">
-            <img src="images/Mechamato-poster.jpg" class="movietab__poster">
-            <img src="images/SAO-poster.jpeg" class="movietab__poster">
-            <img src="images/Wakanda-poster.jpg" class="movietab__poster">
-            <img src="images/black-adam-poster.jpg" class="movietab__poster">
-        </div>
-    </div>
-
-    <div class="hidden_contents" id="snacktab_desc">
-        <h2>Snack</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, quis quam voluptatibus natus soluta
-            perspiciatis est magni aliquam, placeat quisquam recusandae velit. Facere, illum odit. Mollitia, qui minus!
-            Itaque, iure.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, quis quam voluptatibus natus soluta
-            perspiciatis est magni aliquam, placeat quisquam recusandae velit. Facere, illum odit. Mollitia, qui minus!
-            Itaque, iure.</p>
-    </div>
-
-    <div class="hidden_contents" id="halltab_desc">
-        <h2>Hall</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, quis quam voluptatibus natus soluta
-            perspiciatis est magni aliquam, placeat quisquam recusandae velit. Facere, illum odit. Mollitia, qui minus!
-            Itaque, iure.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, quis quam voluptatibus natus soluta
-            perspiciatis est magni aliquam, placeat quisquam recusandae velit. Facere, illum odit. Mollitia, qui minus!
-            Itaque, iure.</p>
-    </div>
-
-    <div id="visible_contents">
-        <button class="movietab__btn">Add Movie' s History</button>
-        <div class="movietab__posters">
-            <img src="images/Mechamato-poster.jpg" class="movietab__poster">
-            <img src="images/SAO-poster.jpeg" class="movietab__poster">
-            <img src="images/Wakanda-poster.jpg" class="movietab__poster">
-            <img src="images/black-adam-poster.jpg" class="movietab__poster">
-        </div>
-    </div>
+	<div class="login_header" id="center">
+		<label>Login</label>
+	</div>
 	
+	<form method="POST" action="controller">
+		<div class="username_input">
+			<input type="text" name="username" id="username" required><br>
+			<span></span>
+			<label>Username</label>
+		</div>
+		
+		<div class="password_input">
+			<input type="password" name="password" id="password" required><br>
+			<span></span>
+			<label>Password</label>
+		</div>
+		
+		<div class="forgot_password">
+			<a href="forgot_pass.jsp">Forgot your password?</a>
+		</div>
+		
+		<div>
+			<input type="submit" value="Login">
+			<br><br>
+		</div>
+	</form>
 </body>
 </html>
