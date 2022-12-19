@@ -69,7 +69,7 @@ p, span, small, h1, h2, h3, h4, h5 {
 		</div>
 		<div class="row">
 			<div class="col-md-4 pr-3">
-				<img height="100%" width="100%"
+				<img height="100%" width="100%" style="object-fit:contain"
 					src="https://m.media-amazon.com/images/M/MV5BNTM4NjIxNmEtYWE5NS00NDczLTkyNWQtYThhNmQyZGQzMjM0XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg">
 
 			</div>
