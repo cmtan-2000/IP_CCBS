@@ -40,7 +40,7 @@ img {
 		<button class="btn btn-light ml-auto my-4 d-block mr-3 shadow">Add Movie History</button>
 		<div class="container h-100 m-auto">
 			<div class="movie-grid-view">
-				<div>
+				<div onclick="window.location.href='viewMovie.jsp'">
 					<img height="100%" width="100%"
 						src="https://m.media-amazon.com/images/M/MV5BNTM4NjIxNmEtYWE5NS00NDczLTkyNWQtYThhNmQyZGQzMjM0XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg">
 				</div>
