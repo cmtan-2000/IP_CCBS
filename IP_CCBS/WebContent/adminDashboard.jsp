@@ -6,7 +6,109 @@
 <meta charset="ISO-8859-1">
 <title>Admin_Dashboard</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+	rel="stylesheet">
+	
+<style>
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap')
+	;
+	
+*{
+	font-family: 'Poppins', sans-serif;
+}
+/* 
+body {
+	background-color: none;
+	width: 80%;
+	margin: 0 auto;
+}
+
+h1 {
+	color: navy;
+	margin-left: 20px;
+}
+
+.container {
+	position: absolute;
+	width: 80%;
+	height: 100%;
+	background-color: none;
+}
+
+button {
+	background-color: white;
+	border: 0.2px;
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 5px;
+	box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 2px 0
+		rgba(0, 0, 0, 0.19);
+	font-weight: bolder;
+}
+
+.bottomContainer .TabSelect .tab {
+	background-color: grey;
+	box-shadow: none;
+	font-size: 20px;
+}
+
+.bottomContainer .TabSelect .active {
+	background-color: #BBCFD0;
+}
+
+.bottomContainer .cinema {
+	width: 95%;
+	margin: 0 auto 20px auto;
+}
+
+.bottomContainer .cinema h2 {
+	margin: 0px 0px 10px 16px;
+	font-size: 40px;
+}
+
+.bottomContainer .cinema hr {
+	height: 2px;
+	border-width: 0;
+	color: gray;
+	background-color: gray
+}
+
+.bottomContainer .cinema .row {
+	display: flex;
+	flex-direction: row;
+	/* background-color: grey; */
+	width: 100%
+}
+
+.bottomContainer .branch {
+	width: 330px;
+	background-color: green;
+	margin: 0 25px 0 0;
+	minheight: 200px;
+	maxheight: 300px;
+}
+
+.bottomContainer .MovieContainer {
+	width: 95%;
+	height: 90%;
+	margin: 20px auto 20px auto;
+	display: flex;
+	flex-wrap: wrap
+}
+ */
+</style>
 </head>
+
+
 <body>
 
 	<div class="container">
