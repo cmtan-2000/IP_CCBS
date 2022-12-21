@@ -24,7 +24,6 @@
         <button>Generate Sales Report</button>
     </div>
 
-<<<<<<< HEAD
 	<!-- <form name="loginForm" action="BasicController" method="get">
 	Full Name Changes: <input type="text" name="fullname" placeholder="fullname"/><br>
 	Email: <input type="text" name="email" placeholder="email"/><br>
@@ -35,7 +34,6 @@
 	   <button name="button" value="OK" type="button">Admin_Dashboard</button>
 	</a>
 
-=======
     <br> <br>
     <!-- for users to navigate and click the tabs -->
     <div class="company__alltab">
@@ -86,6 +84,5 @@
         </div>
     </div>
 	
->>>>>>> refs/remotes/origin/eunice
 </body>
 </html>
