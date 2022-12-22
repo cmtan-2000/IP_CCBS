@@ -1,6 +1,18 @@
 @charset "ISO-8859-1";
 
-body {
+/* body {
+  background-color: lightblue;
+} */
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap')
+	;
+	
+*{
+	font-family: 'Poppins', sans-serif;
+}
+ 
+/* body {
 	background-color: none;
 	width: 80%;
 	margin: 0 auto;
@@ -32,12 +44,7 @@ button {
 	font-weight: bolder;
 }
 
-/*
-----Admin_Dashboard
-----AdminMovie
-*/
 .bottomContainer .TabSelect .tab {
-	/* background-color: #BBCFD0; */
 	background-color: grey;
 	box-shadow: none;
 	font-size: 20px;
@@ -67,7 +74,7 @@ button {
 .bottomContainer .cinema .row {
 	display: flex;
 	flex-direction: row;
-	/* background-color: grey; */
+	background-color: grey;
 	width: 100%
 }
 
@@ -82,8 +89,8 @@ button {
 .bottomContainer .MovieContainer {
 	width: 95%;
 	height: 90%;
-/* 	background-color: grey;*/
 	margin: 20px auto 20px auto;
 	display: flex;
 	flex-wrap: wrap
-}
+} */
+ 
