@@ -12,6 +12,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
 	rel="stylesheet">
+	<script src="https://kit.fontawesome.com/6f995c3af2.js" crossorigin="anonymous"></script>
 <title>Wakanda Forever</title>
 
 <style>
@@ -65,11 +66,12 @@ p, span, small, h1, h2, h3, h4, h5 {
 <body style="background: black">
 	<div class="container">
 		<div class="float-right watch-movie-button mt-5">
-			<i class="fa-solid fa-ticket"></i><span>Watch Now</span>
+			<span><i class="fas fa-ticket-alt" aria-hidden="true"></i>   Watch
+				Now</span>
 		</div>
 		<div class="row">
 			<div class="col-md-4 pr-3">
-				<img height="100%" width="100%" style="object-fit:contain"
+				<img height="100%" width="100%" style="object-fit: contain"
 					src="https://m.media-amazon.com/images/M/MV5BNTM4NjIxNmEtYWE5NS00NDczLTkyNWQtYThhNmQyZGQzMjM0XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg">
 
 			</div>
