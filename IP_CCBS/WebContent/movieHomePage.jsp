@@ -12,8 +12,8 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
 	rel="stylesheet">
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://kit.fontawesome.com/6f995c3af2.js"
+	crossorigin="anonymous"></script>
 <title>Movie Home Page</title>
 
 <style>
@@ -157,7 +157,8 @@ label {
 				src="https://m.media-amazon.com/images/M/MV5BNTM4NjIxNmEtYWE5NS00NDczLTkyNWQtYThhNmQyZGQzMjM0XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg">
 
 			<button class="btn watch-movie-button mt-3">
-				<i class="fa-solid fa-ticket"></i><span>Watch Now</span>
+				<span><i class="fas fa-ticket-alt" aria-hidden="true"></i>
+					Watch Now</span>
 			</button>
 		</div>
 	</div>
@@ -167,7 +168,7 @@ label {
 
 			<!-- selection -->
 			<div class="col-8">
-				<div class="d-flex flex-wrap mt-5 px-5" style="gap:12px;">
+				<div class="d-flex flex-wrap mt-5 px-5" style="gap: 12px;">
 					<div>
 						<label>Cinema</label> <select name="cinema">
 							<option selected>Choose Cinema</option>
@@ -249,14 +250,12 @@ label {
 										String[] showtimes = new String[] { "10.20am", "10.30am", "10.45am", "10.55am", "11.20am", "11.40am",
 													"1.25pm", "1.35pm", "1.45pm", "2.00pm", "2.10pm", "2.35pm", "2.55pm", "4.25pm", "4.40pm",
 													"4.50pm", "5.00pm", "5.15pm", "5.25pm", "8.05pm", "8.15pm" };
-											String[] colorClass = new String[] { "primary", "success", "warning", "danger", "info", "warning" };
+											String[] colorClass = new String[] { "success", "warning", "danger" };
 											for (int i = 0; i < showtimes.length; i++) {
 												int randNum = (int) (Math.random() * (colorClass.length - 0));
-									%>
-									<button type="button" class="btn btn-warning font-weight-bold"><%=showtimes[i]%></button>
-
-									<%
-										}
+												out.println("<button type='button' class='btn btn-" + colorClass[randNum] + " font-weight-bold'>"
+														+ showtimes[i] + "</button>");
+											}
 									%>
 								</div>
 							</div>
