@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +13,8 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
 	rel="stylesheet">
+<link rel="stylesheet" href="css/modal.css">
+
 <script src="https://kit.fontawesome.com/6f995c3af2.js"
 	crossorigin="anonymous"></script>
 <title>Home Page</title>
@@ -39,31 +42,6 @@ td[colspan='4'] {
 	border-bottom: 3px solid black !important;
 }
 
-.modal-backdrop {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	width: 100vw;
-	height: 100vh;
-	background-color: #000;
-	opacity: 0.5;
-	display: none;
-}
-
-.dialog {
-	position: absolute;
-	width: auto;
-	height: auto;
-	background: #fff;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	left: 50%;
-	min-width: 640px;
-	display: none;
-	z-index: 1050;
-}
-
 .button-rows {
 	display: flex;
 	flex-direction: column;
@@ -71,35 +49,42 @@ td[colspan='4'] {
 	align-items: end;
 }
 
-.times-button {
-	background: lightgray;
-	height: 25px;
-	width: 25px;
-	text-align: center;
-	border-radius: 30px;
-}
-
 .snack-title {
 	font-size: 23px;
+}
+
+.toast {
+	position: fixed;
+	bottom: 0;
+	left: 15px;
+	background: #90ee90;
 }
 </style>
 </head>
 <body>
+	<%
+		String[] combo = new String[]{"Signature Popcorn (Small) + 1x Regular Drink/Mineral Water",
+				"Big Depper + 1x Regular Drink / Mineral Water",
+				"Golden Horn Chips (Small) + 1x Regular Drink/ Mineral Water",
+				"5pcs Hot Minis + 1x RegularDrink / Mineral Water"};
+		double[] comboPrice = new double[]{9.9, 9.9, 9.9, 9.9};
+
+		String[] food = new String[]{"Large Size Onion Ring", "Medium PopCorn", "Medium PopCorn"};
+		double[] foodPrice = new double[]{9.9, 9.9, 9.9};
+
+		String[] drink = new String[]{"Sprite", "MountainDew"};
+		double[] drinkPrice = new double[]{4.9, 2.9};
+	%>
 	<div class="modal-backdrop" id="backdrop" onclick="toggleDialog()"></div>
 	<div class="container mt-5" style="color: #BBCFD0;">
-		<button class="btn btn-success font-weight-bold" onclick="toggleDialog()">Add
-			Food and Beverage</button>
+		<button class="btn btn-success font-weight-bold"
+			onclick="toggleDialog()">Add Food and Beverage</button>
 		<div class="container mt-5">
 			<table class="table table-border">
 				<tr>
 					<td colspan="4"><b class="snack-title">Combo</b></td>
 				</tr>
 				<%
-					String[] combo = new String[]{"Signature Popcorn (Small) + 1x Regular Drink/Mineral Water",
-							"Big Depper + 1x Regular Drink / Mineral Water",
-							"Golden Horn Chips (Small) + 1x Regular Drink/ Mineral Water",
-							"5pcs Hot Minis + 1x RegularDrink / Mineral Water"};
-					double[] comboPrice = new double[]{9.9, 9.9, 9.9, 9.9};
 					for (int i = 0; i < combo.length; i++) {
 						out.println(String.format("<tr>" + "<td>" + combo[i] + "</td>" + "<td>RM %.2f</td>"
 								+ "<td><button class='btn btn-info'>Edit</button></td>"
@@ -110,8 +95,6 @@ td[colspan='4'] {
 					<td colspan="4"><b class="snack-title">Food</b></td>
 				</tr>
 				<%
-					String[] food = new String[]{"Large Size Onion Ring", "Medium PopCorn", "Medium PopCorn"};
-					double[] foodPrice = new double[]{9.9, 9.9, 9.9};
 					for (int i = 0; i < food.length; i++) {
 						out.println(String.format("<tr>" + "<td>" + food[i] + "</td>" + "<td>RM %.2f</td>"
 								+ "<td><button class='btn btn-info'>Edit</button></td>"
@@ -122,8 +105,6 @@ td[colspan='4'] {
 					<td colspan="4"><b class="snack-title">Drink</b></td>
 				</tr>
 				<%
-					String[] drink = new String[]{"Sprite", "MountainDew"};
-					double[] drinkPrice = new double[]{4.9, 2.9};
 					for (int i = 0; i < drink.length; i++) {
 						out.println(String.format("<tr>" + "<td>" + drink[i] + "</td>" + "<td>RM %.2f</td>"
 								+ "<td><button class='btn btn-info'>Edit</button></td>"
@@ -143,10 +124,10 @@ td[colspan='4'] {
 				<b>Package:</b> <span class="py-1 px-4"
 					style="background: lightblue; border-radius: 3px;">Combo</span>
 			</p>
-			<input readonly disabled name="combo" value="Medium Popcorn" /> <br>
-			<br> <input readonly disabled name="food"
-				value="Small Sized Drink" /> <br> <br> <input disabled
-				readonly name="drink" value="Onion Ring" /><br> <br>
+			<input class="form-control" name="combo" value="Medium Popcorn" /> <br>
+			<input class="form-control" name="food" value="Small Sized Drink" />
+			<br> <input class="form-control" name="drink" value="Onion Ring" />
+			<br>
 
 			<hr style="height: 3px; background: black;">
 
@@ -158,6 +139,10 @@ td[colspan='4'] {
 				<button class="btn btn-info" onclick="closeDialog()">Insert</button>
 			</div>
 		</div>
+	</div>
+
+	<div class="toast ml-3" style="display: none;" id="toast">
+		<div class="toast-body">Successfully inserted.</div>
 	</div>
 
 
@@ -178,9 +163,12 @@ td[colspan='4'] {
 		function closeDialog() {
 			var dialog = document.getElementById("addFoodAndBeverageDialog");
 			var backdrop = document.getElementById("backdrop");
+			var toast = document.getElementById("toast");
 
 			dialog.style.display = "none";
 			backdrop.style.display = "none";
+			toast.style.opacity = 1;
+			toast.style.display = "block";
 		}
 	</script>
 </body>
