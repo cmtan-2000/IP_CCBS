@@ -43,15 +43,18 @@
     </div>
 
     <div class="company__movietab hidden_contents" id="movietab_desc">
-      <button type="button" class="movietab__btn btn btn-primary">
+      <!-- link direct to add movie history page -->
+        <a target="_blank" href="./add-movie-history.jsp">
+        <button type="button" class="movietab__btn btn btn-primary">
         Add Movie' s History </button>
+        </a>
         <div class="movietab__posters">
             <img src="images/Mechamato-poster.jpg" class="movietab__poster" />
             <img src="images/SAO-poster.jpeg" class="movietab__poster" />
             <img src="images/Wakanda-poster.jpg" class="movietab__poster" />
             <img src="images/black-adam-poster.jpg" class="movietab__poster" />
         </div>
-    </div>
+    </div>
 
     <div class="hidden_contents" id="snacktab_desc">
         <h2>Snack</h2>

@@ -9,10 +9,11 @@
 </head>
 <body>
 
-<div class="login_header">
-		<label>Login</label>
-	</div>
-	<div id="center">
+
+	<div id="center" >
+		<div class="login_header">
+			<label>Login </label>
+		</div>
 		<form method="POST" action="controller">
 			<div class="username_input">
 				<input type="text" name="username" id="username" required><br>
@@ -20,7 +21,7 @@
 				<label>Username</label>
 			</div>
 			<div class="password_input">
-				<input type="text" name="password" id="password" required><br>
+				<input type="password" name="password" id="password" required><br>
 				<span></span>
 				<label>Password</label>
 			</div>
@@ -30,6 +31,16 @@
 			
 			<input type="submit" value="Login">
 			<br><br>
+			
+			<!-- <p>
+			<label>User Name</label>
+			<input type="text" name="username" required><br>
+			</p>
+			<p>
+			<label>Password</label>
+			<input type="password" name="password" required><br>
+			</p> -->
+			
 		</form>
 	</div>
 	

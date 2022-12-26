@@ -11,12 +11,18 @@ body {
 	background: linear-gradient(120deg, rgba(2, 0, 36, 1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,200,1) 100%);
 	height: 100vh;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center
 }
 
 #center {
 	margin: auto;
 	background-color: white;
 	border-radius: 10px;
+	width: 30%;
+	padding: 20px
 }
 
 .login_header {
@@ -24,23 +30,19 @@ body {
 	text-align: center;
 	width: 100%;
 	font-size: 40px;
-	color: white;
 	border-bottom: 1px solid silver;
+	font-weight: bolder
 }
 
-.username_input {
-	position: relative;
-	margin: 40px 0 0;
-}
- 
+
+.username_input,
 .password_input {
 	position: relative;
-	margin: 20px 0 20px;
+	margin: 20px 20px 20px;
 }
 
 .username_input input,
 .password_input input {
-	width: 100%;
 	padding: 0px 5px;
 	border: none;
 	outline: none;
@@ -91,6 +93,7 @@ body {
 .forgot_password {
 	text-decoration: underline;
 	color: rgb(136, 135, 135);
+	margin: 20px 20px;
 }
 
 input[type="submit"] {
