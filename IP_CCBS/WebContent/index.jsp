@@ -12,7 +12,7 @@
 		<label>Login</label>
 	</div>
 	<div id="center">
-		<form method="POST" action="controller">
+		<form method="POST" action="LoginController">
 			<div class="username_input">
 				<input type="text" name="username" id="username" required><br>
 				<span></span>
