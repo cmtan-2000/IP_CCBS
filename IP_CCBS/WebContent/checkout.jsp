@@ -34,7 +34,9 @@
         	RM 
         </div>
       	<div class="grid-item item11" align="right">
-        	<input type="submit" value="CONFIRM" name="confirm">
+      		<form method="POST" action="paymentSuccess.jsp">
+      			<input type="submit" value="CONFIRM" name="confirm">
+   			</form>
         </div>
 	</div>
 	

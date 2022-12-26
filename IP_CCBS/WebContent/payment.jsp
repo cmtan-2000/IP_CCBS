@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="header">
-		<label>Checkout</label>
+		<label>Payment Gateway</label>
 	</div>
 	<div class="grid-container">
 		<div class="grid-item item1">
@@ -33,7 +33,9 @@
         	 
         </div>
       	<div class="grid-item item11" align="right">
-        	<input type="submit" value="NEXT" name="next">
+        	<form method="POST" action="checkout.jsp">
+      			<input type="submit" value="NEXT" name="next">
+   			</form>
         </div>
 	</div>
 </body>

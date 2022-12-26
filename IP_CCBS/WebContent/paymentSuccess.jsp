@@ -10,7 +10,9 @@
 <body>
 	<div class="header">
 		<label>Payment Successfully</label>
-		<input type="submit" value="RETURN" name="return" class="return">
+		<form method="POST" action="checkout.jsp">
+			<input type="submit" value="RETURN" name="return" class="return">
+		</form>
 	</div>
 	<div class="grid-container">
 		<div class="grid-item item1">
