@@ -14,7 +14,7 @@
   list-style: none;
   display: inline;
   padding: 1rem 3rem;
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 8px 8px 0px 0px;
   background-color: #d4d4d4;
   color: black;
   font-weight: bold;
@@ -65,7 +65,7 @@ td {
 #visible_contents {
   background-color: #bbcfd0;
   padding: 3rem;
-  border-radius: 0px 5px 5px 5px;
+  border-radius: 0px 8px 8px 8px;
   line-height: 1.6rem;
   margin: -1px 40px;
 }
@@ -87,4 +87,11 @@ td {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0 3rem 0;
 }
